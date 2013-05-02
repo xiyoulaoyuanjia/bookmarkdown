@@ -137,13 +137,22 @@ def _build_index_file(chapters):
 
     with open(source, 'r') as f:
         content = markdown.markdown(f.read())
-
     out = render('splash', content=content, chapters=chapters)
     target = join('build', 'html', 'index.html')
 
     with open(target, 'w') as f:
         f.write(out.encode("utf-8"))
 
+
+    import bookmarkdown as ugly_hack
+
+    static_src = join(os.path.dirname(ugly_hack.__file__), 'static')
+    static_dest = join('build', 'html', 'static')
+
+    if os.path.exists(static_dest):
+        shutil.rmtree(static_dest)
+
+    shutil.copytree(static_src, static_dest)
 
 def _copy_static():
     import bookmarkdown as ugly_hack
@@ -161,12 +170,14 @@ def _build_html():
 
     _copy_static()
 
-    paths = ['preface', 'acknowledgements']
+    paths =[]
     for filename in os.listdir('chapters'):
         if filename.endswith('.markdown'):
             name = filename.rsplit('.')[0]
             paths.append(join('chapters', name))
 
+    paths.sort()
+    paths = ['preface', 'acknowledgements'] + paths
     _build_html_file('license', 'single', paths)
     _build_html_file('preface', 'single', paths)
     _build_html_file('acknowledgements', 'single', paths)
