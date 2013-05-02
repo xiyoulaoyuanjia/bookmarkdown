@@ -4,6 +4,8 @@
 import os, re, shutil, sys
 import baker
 import markdown
+
+sys.path.append(os.getcwd())
 try:
     import config
 except ImportError:
@@ -18,9 +20,9 @@ env = Environment(loader=PackageLoader('bookmarkdown', 'templates'))
 join = os.path.join
 
 base_context = {
-    'book_title': getattr(config, 'title', ''),
-    'author': getattr(config, 'author', ''),
-    'author_url': getattr(config, 'author_url', ''),
+    'book_title': getattr(config, 'title', '').decode("utf-8"),
+    'author': getattr(config, 'author', '').decode("utf-8"),
+    'author_url': getattr(config, 'author_url', '').decode("utf-8"),
     'ga_id': getattr(config, 'ga_id', ''),
     'gauges_id': getattr(config, 'gauges_id', ''),
 }
