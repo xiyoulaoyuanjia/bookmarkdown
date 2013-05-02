@@ -1,0 +1,9 @@
+Preparing the System
+============
+
+Because the OSSEC HIDS installer must compile the application from source code the first
+time it runs, a working build environment is required on your system. For most operating
+systems of the Linux or BSD persuasion, a C compiler and supporting files is already be installed.
+If not, you must install gcc and development headers before proceeding.
+
+

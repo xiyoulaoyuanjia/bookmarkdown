@@ -1,0 +1,117 @@
+总结
+============
+
+**Summary**
+
+**_总结_**
+
+IDSs act as security guards deployed throughout your network. 
+
+_IDS 在网络的部署中中扮演着网络守护者_
+
+An IDS watches for intruders on your network in the form of malicious users, bots, and worms, and alerts you as soon as the intrusions are detected.
+
+_IDS在你的网络中监视着各种恶意的用户、机器人、蠕虫、的入侵，并在检测到时第一时间通知你。_
+
+An NIDS is a powerful monitoring system for your network traffic. 
+
+_NIDS是强有力的监控网络流量的系统_
+
+When properly deployed, it has the capability to alert you of attacks destined for your critical systems. 
+
+_如果部署得当，它可以为你的重要的系统提供确定的攻击警告_
+
+
+If an NIDS is incorrectly deployed, you might find yourself chasing down false positives instead of handling valid incidents. 
+
+_当然如果安装不恰当的话，你可能会处理许多的误报而不是恰当的事件_
+
+Tuning your NIDS solution for your environment is key to reducing false
+positives. 
+
+_减少误报率的关键点是依靠部署的环境去调节NIDS_
+
+Proper signature creation allows you to mitigate common NIDS evasion techniques
+such as string matching, session splicing, fragmentation attacks, and DoS attacks.
+
+_建立合适的特征库可以有效的避免常见的对抗NIDS的技术，例如字符串匹配(是这样子吗？)，会话拼接，碎片攻击，拒绝服务攻击等_
+
+ Most network intrusion detection systems currently have a method to mitigate these techniques by reasembling the full traffic session in memory. 
+
+
+_目前大多数的网络入侵检测系统使用在内存中重组网络流量会话的方法来抵抗这些攻击技术_
+
+As you would expect, this can prove dangerous on a busy network or on an NIDS that has not been properly tuned, because it has the potential to exhaust all system resources.
+
+_正如你可以预见的一样，在一个繁忙的或者NIDS 并没有很好的被调整的网络中这将是十分危险的，因为这可能会耗尽系统的所有资源。_
+
+An HIDS is designed to protect the server on which it is installed. 
+
+_HIDS 是被用来设计保护安装它的系统的_
+
+It is able to inspect the full communications stream between the local and remote system interacting with the HIDS.
+
+_它可以检测到本地与远程系统使用HIDS交互的所有的通信流(????)_
+
+NIDS evasion techniques do not cause the same headaches with an HIDS solution because
+the HIDS is able to inspect the fully recombined session as presented to the operating system.
+
+_那些另NIDS头疼的抵抗NIDS的技术在HIDS身上并不起作用，因为NIDS可以在操作系统上从现完整的会话信息_
+
+An HIDS is also capable of performing additional system level checks that only IDS software
+installed on a host machine can do, such as f ile integrity checking, registry monitoring, rootkit
+detection, and active response.
+
+_另外,HIDS 也可以实现向安装到主机的IDS才可以做的一样系统级别的检测，例如 完整性检测、监控注册表、日志分析、rootkit 检测、和联动机制_
+
+OSSEC is a scalable, multiplatform, open source HIDS with more than 5,000 downloads
+each month. 
+
+_ossec 是一个可扩展的、跨平台的、每个月超过5000的下载量的开源HIDS_
+
+It has a powerful correlation and analysis engine that integrates log analysis, file
+integrity checking, Windows registry monitoring, centralized policy enforcement, rootkit
+detection, and real-time alerting and active response.
+
+_ossec具有强大的关联分析引擎、日志分析、文件完整性检测、windows注册表监控、集中的策略执行与实时的关联反应的特点。_
+
+ OSSEC runs on most operating systems,including Linux, OpenBSD, FreeBSD, Mac OS X, Solaris, and Windows. 
+
+_ossec可以运行在大多数操作系统上面,这其中包括linux、OpenBSD、FreeBSD、Mac OS X、Sun Solaris, and Microsoft Windows 等系统 _
+
+In addition to being deployed as an HIDS, it is commonly used strictly as a log analysis tool, to monitor and analyze firewalls, IDSs, Web servers, and authentication logs.
+
+_另外ossec通常作为HIDS被部署。这其中应用较多的是作为一种日志分析工具,监控与分析防火墙、IDS系列、web服务器、审计等的日志_
+
+There are three installation types to consider when installing the OSSEC HIDS.
+
+_当安装OSSEC HIDS 时可以有3种方式选择_
+
+The Local installation type is designed to be an all-in-one solution that includes all the protection and logging capabilities the OSSEC HIDS software provides. 
+
+_本地安装是一种包含了OSSEC HIDS 软件提供的保护与日志所有功能于一体的集中解决方案_
+
+The Agent installation type protects the host it is installed on, reports all alerts, and logs back to a server installation. 
+
+_客户端安装方式可以保护安装在它上面的机器，将所有的警告、日志信息回传给远程的服务器。_
+
+The Server installation type protects the system it is installed on and allows you to centralize the alerting and logging of remote agents and third-party devices such as routers, switches, firewalls, and so on.
+
+_服务器安装方式可以保护本地系统，同时允许把远程与第三方的警告与日志发回来集中分析，例如路由器、交换机、防火墙等等设备._
+
+
+The OSSEC HIDS software can be installed on every popular operating system currently
+available. 
+
+_OSSEC HIDS 可以安装在所有流行的操作系统上面_
+
+
+Certain operating systems have dependencies that must be satisfied prior to beginning
+installation. 
+
+_当然，对于每一种操作系统安装(OSSEC)之前必须先要满足它的依赖条件。_
+
+The most current list of supported operating systems can be found on the OSSEC
+Wiki site located at www.ossec.net/wiki/index.php/Supported_System.
+
+_最新的OSSEC支持的操作系统列表可以在位于www.ossec.net/wiki/index.php/Supported_System的OSSEC的WIKI上面找到(当前网址已经不可用了)_

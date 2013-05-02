@@ -1,0 +1,31 @@
+考虑部署你的OSSEC
+=============
+
+**Planning Your Deployment**
+
+**_考虑部署你的OSSEC_**
+
+Before starting your OSSEC HIDS installation you must know the differences between the
+installation types and know how plan your deployment. 
+
+_在考虑开始你的OSSEC的安装之前你必须先知道不同的安装类型的区别并且知道如何部署_
+
+The OSSEC HIDS can be installed on one system, on multiple systems to provide protection for a large network, or on a few systems with the plan to scale the deployment later to secure your entire organization.
+
+_OSSEC HIDS可以安装到一个系统上去为网络上大量的其它多个系统提供保护，也可以安装到几个系统上去为整个组织提供安全保护_
+
+We will discuss three OSSEC installation types to help you understand how to deploy
+the OSSEC HIDS in your environment:
+
+>* Local installation: Used to secure and protect a single host
+>* Agent installation: Used to secure and protect hosts while reporting back to a
+   central OSSEC server
+>* Server installation: Used to aggregate information from deployed OSSEC agents
+   and collect syslog events from third-party devices
+
+_下来我们将要讨论OSSEC的各种不同的安装类型的区别用来帮你将它部署到你的环境中：_
+
+>* 本地安装:用来保护单个主机的安全
+>* 客户端安装:用来保护主机的全员并将获取的报告数据发回远端的OSSEC服务器
+>* 服务器安装:用于收集汇总分析来自各个部署的OSSEC客户端与第三方设备收集的Syslog日志信息
+

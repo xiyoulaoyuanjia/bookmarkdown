@@ -1,0 +1,21 @@
+文件完整性检测
+=============
+
+**File Integrity Checking**
+
+**_文件完整性检测_**
+
+Every file on an operating system generates a unique digital fingerprint, also known as a
+cryptographic hash.
+
+_利用常见的hash加密，操作系统中的每一个文件都可以产生一个唯一的 数字指纹_
+
+This fingerprint is generated based on the name and contents of the file (Figure 1.6).
+
+_根据文件的名字与内容可以产生这样的指纹，例如图1.6所示_
+
+ An HIDS can monitor important files to detect changes in this fingerprint when someone, or something, modifies the contents of the file or replaces the file with a completely different version of the file.
+
+_当某人或者其它的什么修改文件的内容或者使用完全不同的版本替换了文件的内容时，HIDS可以通过检测到指纹的变化来监视重要的文件的这些变化。_
+
+![](https://drive.google.com/uc?export=view&id=0B_kkWa4qHwL6dDdwUEFLZGtLRDA)

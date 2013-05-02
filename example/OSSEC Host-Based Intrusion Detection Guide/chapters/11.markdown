@@ -1,0 +1,25 @@
+客户端安装
+=================================
+
+**_Agent Installation_**
+
+**_客户端安装_**
+
+
+The Agent installation type is recommended if you plan to deploy the OSSEC HIDS on
+several systems in your organization. 
+
+_当你计划把OSSEC HIDS 安装到机构上的许多系统上的时候,客户端方式安装是被推荐的一种安装方式_
+
+This installation type allows you to deploy the security and protection offered by OSSEC on the host of your choosing and centralizes your information by sending alerts back to a single OSSEC server. 
+
+_这种安装方式允许你选择一台主机部署OSSEC并将其它的主机的日志警告信息发回到这台主机上去集中处理与分析_
+
+The Agent installation eliminates the overhead of logging on your deployed agent and ensures that generated alerts are not kept on the system. 
+
+__
+
+Figure 1.10 shows the Agent role in a typical Agent/Server type deployment.
+
+_图10给出了一个典型的服务器/客户端 类型的部署中客户端的作用_
+

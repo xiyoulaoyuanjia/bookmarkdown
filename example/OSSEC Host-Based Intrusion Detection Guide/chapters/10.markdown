@@ -1,0 +1,36 @@
+本地安装
+=====================
+
+**Local Installation**
+
+**_本地安装_**
+
+The Local installation type is recommended if you plan to install the OSSEC HIDS on
+only one system, such as a personal laptop, workstation, or single server. 
+
+_如果你计划将OSSEC HIDS 安装到单个系统中、例如个人电脑、工作站、或者单个服务器中，那么这种方式是推荐的安装方式_
+
+However, if you are administering a network where you have more than one system to secure and monitor, you should consider using the Agent/Server Installation types.
+
+_但是，如果你需要管理的网络中有多余1个的系统需要监控保证其安全。那么我们还是推荐你选择客户端/服务器这种安装方式_
+
+A Local installation is easier to manage and can be customized for the system on which it is installed. 
+
+_本地安装这种方式便于管理与(被安装的)系统定制_
+
+This installation also combines all the functionality of the OSSEC HIDS software,
+including agent and server functionality, on one system (Figure 1.9). 
+
+_这种安装方式可以包含了OSSEC HIDS 软件的客户端与服务器的所有功能在一个系统上面(如果1.9)_
+
+
+![](http://vdisk-thumb-3.wcdn.cn/frame.1024x768/data.vdisk.me/55890007/f4b9515be2ff7c6c862e90e69e5d983a9676955a?ip=1363191600,10.75.7.25&ssig=lkmS04pScM&Expires=1363190400&KID=sae,l30zoo1wmz)
+
+
+The only downside to a Local installation is if you decide later that you want to send your alerts to a central OSSEC server. 
+
+_本地化安装的唯一不好的地方就是当你安装后你又想把你的警告信息发送到OSSEC服务器上的时候会遇到一些麻烦_
+
+To do so, you will have to uninstall the Local installation and run an Agent installation.
+
+_如果你必须要这么做的化，那么你必须把本地化安装卸载了之后然后在重新已客户端的方式安装才行_

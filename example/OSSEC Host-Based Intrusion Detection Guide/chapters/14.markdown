@@ -1,0 +1,23 @@
+确认安装OSSEC之前的一些注意事项
+==================
+
+**Identifying OSSEC Pre-installation Considerations**
+
+**_确认安装OSSEC之前的一些注意事项_**
+
+Now that you know about the different installation types, it is time to perform the installation,
+right?
+
+_现在你已经知道了不同的安装方式之前的区别了，是否现在就可以开始安装了？_
+
+ Before you rush into installing OSSEC, take a moment to make sure you have all the
+information you need, especially if you are going to deploy OSSEC agents and OSSEC servers.
+
+_在你决定赶快过去安装之前尤其是安装部署OSSEC的客户端与服务器模式之前，你最好花个几分钟考虑下对于安装这些所需要的知识你是否都已经具备了。_
+
+Depending on the operating system you are looking to install OSSEC on, there might be
+some dependencies you must satisfy prior to installation.
+
+_根据你所选择的安装的操作系统的不同，你必须满足这些不同的依赖_
+
+

@@ -1,0 +1,51 @@
+联动反应
+==================
+
+**Active Response**
+
+**_联动反应_**
+
+Active response allows you to automatically execute commands or responses when a speciﬁc
+event or set of events is triggered. 
+
+_当特别的事件或者事件集被触发时,联动反应自动的执行命令或者反应_
+
+For example, look at Figure 1.8. An attacker launches an attack against your organization’s mail server (1). 
+_例如：如果1.8所示,攻击者向你的组织的邮件服务器发动了攻击_
+
+The attack then passes through your ﬁrewall (2), and ﬁnally, transparently, passes by your deployed network tap that inspects all trafﬁc destined for your mail server (3). 
+
+_攻击先通过防火墙,最后通过了部署在邮件服务器上用来检测所有通过的流量的网络trap_
+
+
+Your NIDS happens to have a signature for this particular attack. 
+
+_NIDS 对于这种攻击有相应的特征库_
+
+The NIDS active response service sends a command to your ﬁrewall (4) to reset the attacker’s session and place a rule blocking that host. 
+
+_这样，NIDS的联动反应机制就会向防火墙发送命令停止会话并加入相应的策略去阻止这台主机的通过防火墙_
+
+When the attacker, whose connection has been reset, tries to initiate the attack again (5), the attacker is blocked.
+
+_当攻击者的连接会话被阻止，他会在去尝试很多次，而由于我们已经修改了防火墙的策略(阻止其ip或者host通过)所以攻击者会被阻止_
+
+
+The beneﬁts of active response are enormous, but also risky. 
+
+_联动反应的好处与风险是同时存在的。_
+
+For example, legitimate trafﬁc might generate a false positive and block a legitimate user/host if the rules are poorly designed. 
+
+_例如、当策略指定的不恰当时,对于合法的流量可能产生错误的判断从而阻止合法的用户与主机通过防火墙_
+
+If an attacker knows that your HIDS blocks a certain trafﬁc signature, the attacker
+could spoof IP addresses of critical servers in your infrastructure to deny you access. 
+
+当然如果攻击者知道你的HIDS的基于某个流量特征库产生相应的策略去阻止这样的ip或者host通过,攻击者就可以伪造你的设备中重要的一些服务器的ip地址去阻止你的访问
+
+
+This is essentially a DoS attack that prevents your host from interacting with that IP address.
+
+_这实际山就是一种阻止你的主机访问一些ip地址的拒绝服务攻击_
+

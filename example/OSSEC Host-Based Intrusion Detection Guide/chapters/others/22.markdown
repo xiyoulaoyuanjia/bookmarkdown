@@ -1,0 +1,25 @@
+Building and Installing
+===========
+
+Whether you are doing a local or server installation, the first stage is the same. Extract the .
+tar.gz file, change into the created directory, and then run the install script.
+
+
+# gunzip -c ossec-hids-1.3.tar.gz | tar -xf -
+# cd ossec-hids-1.3
+# ./install.sh
+
+
+The installation script is divided into several steps to guide you through the installation.
+The steps are slightly different for each install type. However, the initial screen is the same
+for all installations and allows you to choose your preferred language. Here we choose the
+default en for English by pressing Enter.
+
+
+加一些图 具体看原文
+
+
+Next, we press Enter to move to the selection of install type. At this point, you must
+decide which install type you require. You might now decide to jump ahead in the chapter
+to a specific install, but be sure to review all installation types because each type provides
+useful information about OSSEC HIDS components and features.

@@ -1,0 +1,132 @@
+一些需要特别考虑的事情
+==============================
+
+**Special Considerations**
+
+**_一些需要特别考虑的事情_**
+
+Every operating system has specific requirements that must be addressed before new software is installed. 
+
+_每一个操作系统在安装新软件之前都必须解决一些依赖问题_
+
+We have identified known prerequisites for some of the more popular operating
+systems here.
+
+_我们已经列出了一些常见的操作系统的依赖问题_
+
+>* Microsoft Windows
+
+>>* Before installation of the OSSEC HIDS software, no additional packages must be installed
+on a Microsoft Windows platform. 
+
+>>* 对于windows系列，在安装OSSEC HIDS软件之前我们并不需要一些其它的软件包需要安装
+
+>>* Please note that continued development and support are only available for:
+
+>>* 注意我们仅仅对于以下这些保持持续的开发与支持:
+
+>>>* Microsoft Windows 2000 Workstation
+>>>* Microsoft Windows 2000 Server
+>>>* Microsoft Windows XP Home
+>>>* Microsoft Windows XP Professional
+>>>* Microsoft Windows 2003 Server
+
+>>* The OSSEC HIDS can only be installed as an Agent at this time because of the reliance
+on Unix sockets for the server portion. 
+
+>>* _由于作为服务器要求的Unix套接子的稳定性的要求，目前OSSEC HIDS 仅仅可以当作 客户端安装这种方式(在windows上面安装)_
+
+>>* Local and Server type installations are currently being investigated.
+
+>>* _本地与服务器的安装方式目前正在调研研究中_
+
+>* Sun Solaris
+
+>>* Before beginning your OSSEC installation on a Sun Solaris platform, ensure that you have installed the SUNWxcu4 package. 
+
+>>* _在Sun solaris 平台上面安装OSSEC之前必须确保系统已经安装了SUNWxcu4 包_
+
+>>* To check if the SUNWxcu4 package has previously been installed, execute the following from your Solaris command line:
+
+>>* _可以在你的Solaris命令行中运行如下的命令来检测是否已经安装了SUNWxcu4 包_
+
+>>*    $ pkginfo | grep SUNWxcu4
+
+>>* If you do not have the SUNWxcu4 package installed, execute the following command
+to install it:
+
+>>* _如果你没有安装SUNWxcu4 安装包。可以执行如下的命令安装_
+
+>>*   $ pkgadd SUNWxcu4
+
+
+
+>* Ubuntu Linux
+
+>>* If using an Ubuntu Linux version before release 7.04 you must ensure that the build-essential package is installed before you install the OSSEC HIDS software. 
+
+>>* _如果你使用的ubuntu版本是7.04 之前的化那么一定要在安装OSSEC HIDS之前确定系统有没有安装build-essential软件包_
+
+
+>>* To check if the build-essential package has already been installed, execute the following from your Ubuntu command line:
+
+>>* _检测是否安装了build-essential 软件包可以执行如下的命令_
+
+>>*	$ aptitude search build-essential
+
+>>* If the build-essential package is installed, you will see an i beside the package: 
+
+>>* _如果build-essential软件包已经安装了的话，可以看到如下的信息_
+
+>>*	i build-essential - informational list of build-essential pack
+
+
+>>* If you do not have the build-essential package installed, execute the following command
+to install it:
+
+>>* _当然如果你没有安装 build-essential软件包的话，可以执行如下的命令安装_
+
+>>*	$ sudo apt-get install build-essential
+
+>>* If using Ubuntu Linux version 7.04 or later you must ensure that the gcc and glibc-dev
+packages are installed before you install the OSSEC HIDS software. 
+
+>>* _如果使用的ubuntu的系统是7.04或者之后的版本那么一定要确认系统是否已经安装了gcc 和 glibc-dev 软件包_
+
+>>* These packages are required to properly build the OSSEC HIDS software for your system. 
+
+>>* _这些软件包对于安装OSSEC HIDS 软件都是必须需要的。_
+
+>>* If you do not have the gcc and glibc-dev packages installed, execute the following command to install the packages:
+
+>>* 如果你没有安装 gcc 和 glibc-dev 软件包，可以执行如下的命令安装：
+
+>>*	$ sudo apt-get install gcc glibc-dev
+
+
+>* Mac OS X
+
+>>* Before you install the OSSEC HIDS software on a system running Mac OS X, you must
+ensure that the Xcode development package is installed to compile the OSSEC HIDS software.
+
+>>* _在Mac OS系统上面安装 OSSEC HIDS 需要确保系统装了可以编译OSSEC HIDS的 Xcode 开发工具_
+
+>>* This package can be found on your Mac OS X installation media or at the Apple Developer Connection site.
+
+>>* _你可以在Mac OS X的安装中心或者连接到 苹果的开发网站查看_
+
+>>* To install Xcode, you must:
+>>>* Download Xcode from the Apple Developer Connection tool site located at
+   http://developer.apple.com/tools/.
+>>>* Run the installer to install the packages you need. 
+
+>>* _安装Xcode 按如下步骤:_
+>>>* _在苹果的开发者工具集 http://developer.apple.com/tools/ 网站里下载 Xcode_
+>>>* _运行安装执行文件_
+
+
+>>* For the OSSEC HIDS software, at a minimum, you need the Developer Tools Software package, but feel free to install any of the other useful packages contained within the Xcode installer.
+
+>>* _安装OSSEC HIDS 软件的最低需要 开发工具包，安装Xcode可以包含很多非常有用的软件_
+
+

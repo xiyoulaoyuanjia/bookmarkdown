@@ -1,0 +1,28 @@
+Getting the Files
+================
+
+All the OSSEC HIDS files needed for installation to any operating system are available at the
+www.ossec.net/files/ Web site. There are three files of interest to us: the main source tar file, the
+Windows agent installer, and the checksum file.
+
+The main source tar file contains the complete source code for the OSSEC HIDS, including
+the Windows agent code. Because Unix- and Linux-based operating systems provide complete
+development tools, the main source tar file contains everything needed to install the OSSEC
+HIDS. For Microsoft Windows, the installation is more complex and development tools are not
+readily available to build the OSSEC HIDS software. Because no development tools are available,
+an executable, GUI-based installer is provided that installs a precompiled OSSEC HIDS service.
+The third file is a checksum file used to validate the integrity of the downloaded files.
+
+From the following URLs, download the main source tar file, the Windows agent installer,
+and the checksum files, using a browser or command-line utility such as wget:
+■ www.ossec.net/files/ossec-hids-1.4.tar.gz
+■ www.ossec.net/files/ossec-agent-win32-1.4.exe
+■ www.ossec.net/files/ossec-hids-1.4_checksum.txt
+
+The checksums are provided to ensure the integrity of the downloaded files and allow
+you to check for file corruption or unintentional modification. If these checks fail, you will
+have to try the download again. From the command line, change to the directory where you
+saved the downloaded files and verify the checksums.
+# md5sum -c ossec-hids-1.4_checksum.txt
+ossec-hids-1.4.tar.gz: OK
+ossec-agent-win32-1.4.exe: OK

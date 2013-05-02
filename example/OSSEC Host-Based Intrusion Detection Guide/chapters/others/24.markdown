@@ -1,0 +1,19 @@
+Performing Server-Agent Installations
+==================
+
+Performing Server-Agent Installations
+
+
+Server-agent installations are meant for a central controller with multiple agents, which is ideal
+for providing protection among networked hosts. It provides some advantages over simply having
+local installations on each host. This is because the server performs all log analysis for agents
+connected to it. Active responses are initiated from the server, but can be executed on an
+agent or all agents simultaneously.
+
+Because Windows hosts can only be agents, a server is always required prior to installing
+the OSSEC HIDS on Microsoft Windows. Windows installations are covered separately in
+this chapter, after a Unix server-agent setup.
+
+
+The server and agent installations proceed similar to the local installation, except that the
+server is configured to listen for communication from the agents.

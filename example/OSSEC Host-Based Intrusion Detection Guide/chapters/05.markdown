@@ -1,0 +1,33 @@
+注册表监控
+==============
+
+**Registry Monitoring**
+
+**_注册表监控_**
+
+The system registry is a directory listing of all hardware and software settings, operating system
+conﬁgurations, and users, groups, and preferences on a Microsoft Windows system. 
+
+_系统注册表是一个用来存放软硬件的设置、系统配置、windows系统的用户、组和个性化设置的目录_
+
+Changes made by users and administrators to the system are recorded in the system registry keys so that the changes are saved when the user logs out or the system is rebooted. 
+
+_因为用户或者系统管理员对系统所做的更改都会记录到注册表的key中,所以当用户或系统管理员注销或者重启的时候这些更改都会被保存下来。_
+
+The registry also allows you to look at how the system kernel interacts with hardware and software.
+
+_当然注册表也可以帮你观察系统内核是如何与软硬件联系的_
+
+An HIDS can watch for these changes to important registry keys to ensure that a user
+or application isn’t installing a new or modifying an existing program with malicious intent.
+
+_HIDS可以用来观察那些重要的注册表的key的改变，以此来确保用户没有恶意的安装或者修改软件_
+
+For example, a password management utility can be replaced with a modiﬁed executable
+and the registry key changed to point to the malicious copy (Figure 1.7).
+
+_例如：注册表的key值的改变可以反应电脑的密码管理工具被可执行程序替换这个恶意的行为_
+
+
+![](https://drive.google.com/uc?export=view&id=0B_kkWa4qHwL6d2Z2dVJwTzJxaW8)
+

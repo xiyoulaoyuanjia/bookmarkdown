@@ -1,0 +1,53 @@
+Installing the Server
+=======
+
+As with the local install type, server installations can only be done on Linux- and BSD-based
+operating systems, including Mac OS X. After the initial screen and language selection, we start by
+choosing server installation in step 1 and then a directory location in step 2. Defaults are shown in
+square braces and can be accepted by pressing Enter, or customized similar to the following:
+
+1- What kind of installation do you want (server, agent, local or help)? server
+- Server installation chosen.
+2- Setting up the installation environment.
+- Choose where to install the OSSEC HIDS [/var/ossec]: /var/ossec
+- Installation will be made at /var/ossec .
+
+Step 3, and the corresponding sub steps, deal with notifications and alerts. At this point,
+you must decide which features you want to enable. You can alter any of the choices later in
+the ossec.conf file or by reinstalling the OSSEC HIDS.
+
+这差很多
+
+After you press Enter, the OSSEC HIDS is compiled, installed, and configured with the
+options you specified. When the installation is complete, the installer script provides you with
+some final information.You should make note of the information and take any recommended
+actions. For example, for the OSSEC HIDS to use the OpenBSD pf firewall, a few lines
+must be added to the /etc/pf.conf.
+
+
+You now have a working server installation of the OSSEC HIDS. All binaries, scripts, and
+configurations for the OSSEC HIDS are in the installation directory you specified. To verify
+that everything is ok, start the OSSEC HIDS and complete the installation.
+
+# /opt/ossec/bin/ossec-control start
+Before moving on to setting up agents, remember that the OSSEC HIDS server needs
+to receive communication from agents on port 1514 and possibly 514. You must ensure that
+the firewall or packet filter on the server host machine allows this traffic. Each operating system
+and software distribution provides a way to do this. You must enable inbound UDP traffic
+on ports 1514 and 514 from any subnets where agents are installed. The firewall rule must
+maintain connection state because the agent expects responses from the server.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

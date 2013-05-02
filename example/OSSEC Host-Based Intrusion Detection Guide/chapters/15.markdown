@@ -1,0 +1,27 @@
+支持的操作系统
+=========================
+
+**Supported Operating Systems**
+
+**_支持的操作系统_**
+
+The OSSEC HIDS has been tested on the following operating systems:
+
+_OSSEC HIDS 已经在下列的操作系统上面测试过了_
+
+>* OpenBSD 3.5, 3.6, 3.7, 3.8, 3.9, 4.0, 4.1, and 4.2
+>* GNU/Linux
+>* Slackware 10.1 and 10.2
+>* Ubuntu 5.04, 5.10, and 6.06 (32 and 64 bits)
+>* Red Hat 8.0 and 9.0
+>* Red Hat Enterprise Linux (RHEL) 4 and 5
+>* SUSE ES 9 and 10
+>* Fedora Core 2, 3, 4, and 5
+>* Debian 3.1 Sarge
+>* FreeBSD 5.2.1, 5.4-RELEASE, 6.0-STABLE, and 6.1-RELEASE
+>* NetBSD 3.0
+>* Solaris 2.8, 2.9 (Sparc) and 10 (x86)
+>* AIX 5.2 ML-07
+>* HP-UX 11i v2
+>* Mac OS X 10.x
+>* Windows 2000, XP, and 2003 (agent only)

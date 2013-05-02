@@ -1,0 +1,16 @@
+Rootkit  检测
+=======
+
+**Rootkit Detection**
+
+**_Rootkit  检测_**
+
+A rootkit is a program developed to gain covert control over an operating system while hiding
+from and interacting with the system on which it is installed. 
+
+_rootkit 是一种被设计用来隐藏在操作系统伺机控制系统或者与安装的系统交互的程序_
+
+An installed rootkit can hide services, processes, ports, ﬁles, directories, and registry keys from the rest of the operating system and from the user.
+
+_已经安装的rootkit可以向用户与系统隐藏服务、进程、端口、目录、注册表等项_
+

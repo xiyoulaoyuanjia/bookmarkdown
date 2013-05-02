@@ -1,0 +1,64 @@
+Performing Local Installation
+=========
+
+Local installations can only be done on Linux- and BSD-based operating systems, including
+Mac OS X. Start by choosing local installation in step 1 and then a directory location in
+step 2. The defaults are shown in square braces and can be accepted by pressing Enter or
+customized as in the case where we have chosen /opt/ossec instead of /var/ossec.
+
+图
+
+Step 3, and the corresponding substeps, deal with notifications and alerts. At this point,
+you must decide which features you want to enable. You can alter any of the choices later in
+the ossec.conf file or by reinstalling the OSSEC HIDS.
+
+
+The OSSEC HIDS communicates alert conditions that require your attention through
+email. You should specify an email address you check frequently. The sooner you are aware
+of a new threat, the sooner you can respond before it becomes a major problem.
+
+图
+
+The integrity check daemon is responsible for monitoring and reporting changes in system
+files. The rootkit detection engine regularly performs tests looking for evidence of an installed
+rootkit. Careful configuration of both services provides granular protection or notification of
+illicit file modifications, hidden network port activity, and other evidence of intrusion.
+The details of configuration and rule-tuning are addressed in later chapters. These features are
+very important for most HIDS solutions and should be enabled.
+
+图
+
+
+Active response is a very powerful tool for taking automated actions to prevent intrusion
+or to reduce the extent of an intrusion. Often, an active response will block invasive activity
+much more quickly than you or your attacker can respond. If misconfigured, however, the active
+response can also lock you out of your system or interrupt vital services. By default, the OSSEC
+HIDS active response is quite safe and we recommend enabling it. Be sure, however, to have at
+least one or two well-trusted IP addresses in the white list so you can always access the system.
+
+图
+
+图
+
+After you press Enter, the OSSEC HIDS is compiled, installed, and configured with the
+options you specified. When the installation is complete, the installer script provides you with some
+final information.You should make note of the information and take any recommended actions.
+Typically, any platform-specific steps needed to make the OSSEC HIDS operate fully are provided.
+For example, for the OSSEC HIDS to use the OpenBSD pf firewall, some lines must be added
+to the /etc/pf.conf script. The lines and instructions are provided in the final information.
+
+Now that the install is complete, we can start the OSSEC HIDS service by running the
+following command:
+# /opt/ossec/bin/ossec-control start
+Of course, with the initial configuration created by the installation script, the OSSEC HIDS
+might not do much for you just yet. In the next chapter, we cover altering the configuration
+to better suit your environment. With just a little more work, the OSSEC HIDS will become
+a powerful defensive tool against the invading hordes.
+
+
+
+
+
+
+
+

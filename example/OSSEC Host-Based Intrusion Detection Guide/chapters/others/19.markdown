@@ -1,0 +1,11 @@
+Downloading OSSEC HIDS
+=========
+
+The OSSEC HIDS is most commonly downloaded, compiled, and installed from its source
+code form. Precompiled packages are not currently available from www.ossec.net, with the
+exception of the Windows agent. However, the compiling, configuring, and installation of
+the OSSEC HIDS software is all handled with a single and simple to use script.
+
+On Linux- or BSD-based systems, the installation begins the same way regardless of
+which install type you select. For Windows, an executable installer is provided and performs
+the agent install type.
