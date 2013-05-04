@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 set -e
-python ~/bookmarkdown/bookmarkdown/bookmarkdown build
+python ../../bookmarkdown/bookmarkdown build
