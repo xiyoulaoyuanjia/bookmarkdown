@@ -145,17 +145,6 @@ def _build_index_file(chapters):
     with open(target, 'w') as f:
         f.write(out.encode("utf-8"))
 
-
-    import bookmarkdown as ugly_hack
-
-    static_src = join(os.path.dirname(ugly_hack.__file__), 'static')
-    static_dest = join('build', 'html', 'static')
-
-    if os.path.exists(static_dest):
-        shutil.rmtree(static_dest)
-
-    shutil.copytree(static_src, static_dest)
-
 def _copy_static():
     import bookmarkdown as ugly_hack
 
@@ -188,7 +177,7 @@ def _build_html():
     for path in paths[2:]:
         chapter = _build_html_file(path, 'chapter', paths)
         chapters.append(chapter)
-
+	
     _build_index_file(chapters)
 
 def _build_leanpub():
